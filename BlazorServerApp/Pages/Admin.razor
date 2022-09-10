@@ -1,0 +1,23 @@
+﻿@page "/admin"
+
+
+<AuthorizeView Roles="Admin,Root">
+    <NotAuthorized>
+        You must be Admin or Super Admin to access this page.
+        
+    </NotAuthorized>
+    <Authorized>
+        <h1>Admin panel</h1>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView>
+    <Authorized>
+        Hello, @context.User.Identity.Name!
+        <a href="LogOut">Log out</a>
+    </Authorized>
+    <NotAuthorized>
+        <a href="Register">Register</a>
+        <a href="Login">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>

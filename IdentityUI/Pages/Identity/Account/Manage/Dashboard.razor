@@ -1,0 +1,30 @@
+﻿@page "/Account/Manage"
+<AuthorizeView>
+    <Authorized>
+        <TabControl>
+            <TabPage Text="Personel Data">
+                <UserPersonalDataForm />
+            </TabPage>
+            <TabPage Text="EPosta Değiş">
+                <ChangeEmailForm />
+            </TabPage>
+            <TabPage Text="2 Adımlı Kimlik Doğrulama">               
+            </TabPage>
+            <TabPage Text="Şifre Değiş">
+                <ChangePasswordForm />
+            </TabPage>
+            <TabPage Text="Data Yönet">
+                <ManagePersonalDataForm />
+            </TabPage>
+        </TabControl>
+    </Authorized>
+    <NotAuthorized>
+        <IdentityUI.Components.LoginForm />
+    </NotAuthorized>
+</AuthorizeView>
+
+
+
+@code {
+
+}

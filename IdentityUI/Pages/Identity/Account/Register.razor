@@ -1,0 +1,10 @@
+﻿@page "/Account/Register"
+
+<AuthorizeView>
+    <Authorized>
+        <IdentityUI.Components.LogoutButton />
+    </Authorized>
+    <NotAuthorized>
+        <IdentityUI.Components.RegisterForm />
+    </NotAuthorized>
+</AuthorizeView>

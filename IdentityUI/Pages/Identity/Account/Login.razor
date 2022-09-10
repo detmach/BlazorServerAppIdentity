@@ -1,0 +1,11 @@
+﻿@page "/Account/Login"
+<AuthorizeView>
+    <Authorized>
+        <IdentityUI.Components.LogoutButton />
+    </Authorized>
+    <NotAuthorized>
+        <IdentityUI.Components.LoginForm />
+    </NotAuthorized>
+</AuthorizeView>
+
+

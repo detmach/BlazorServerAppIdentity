@@ -1,0 +1,13 @@
+﻿@page "/Account/Deleted"
+
+<Alert AlertMessage="_alertMessage"/>
+
+@code {
+    private AlertMessage _alertMessage = AlertMessage.Hide();
+
+    protected override void OnInitialized()
+    {
+        _alertMessage = AlertMessage.Show(AlertType.AlertInfo, new[] { "Hesabı Sil" });
+    }
+
+}
